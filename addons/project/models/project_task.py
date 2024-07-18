@@ -264,8 +264,7 @@ class Task(models.Model):
             "By default, the analytic account of the project is set. However, it can be changed on each task individually if necessary.")
 
     # Quick creation shortcuts
-    display_name = fields.Char(compute='_compute_display_name', inverse='_inverse_display_name',
-        help="""Use these keywords in the title to set new tasks:\n
+    display_name = fields.Char(help="""Use these keywords in the title to set new tasks:\n
             #tags Set tags on the task
             @user Assign the task to a user
             ! Set the task a high priority\n
